@@ -17,4 +17,14 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.get("/", async (req, res) => {
+  try {
+    const wishlist = await Wishlist.find({});
+    res.status(200).json(wishlist);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
+
 export default router;
