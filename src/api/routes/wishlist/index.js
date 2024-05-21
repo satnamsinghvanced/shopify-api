@@ -26,5 +26,15 @@ router.get("/", async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
+router.get("/user", async (req, res) => {
+  try {
+    const { userId } = req.body;
+    const wishlist = await Wishlist.findOne({ userId });
+    res.status(200).json(wishlist);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Server Error");
+  }
+});
 
 export default router;
