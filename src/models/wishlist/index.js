@@ -1,9 +1,12 @@
 import mongoose from "mongoose";
 const wishlistSchema = new mongoose.Schema({
-  productId: {
+  url: {
     type: String,
   },
-  userId: {
+  quantity: {
+    type: String,
+  },
+  variantId: {
     type: String,
   },
 });
