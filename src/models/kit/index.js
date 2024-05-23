@@ -6,18 +6,15 @@ const kitSchema = new mongoose.Schema({
   userId: {
     type: String,
   },
+  total: {
+    type: String,
+  },
+  kitQuantity: {
+    type: String,
+  },
   products: [
     {
       productId: {
-        type: String,
-      },
-      productName: {
-        type: String,
-      },
-      price: {
-        type: String,
-      },
-      color: {
         type: String,
       },
       url: {
