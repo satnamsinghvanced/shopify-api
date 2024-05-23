@@ -20,7 +20,7 @@ router.post("/save", async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
+router.get("/all-kits", async (req, res) => {
   try {
     const kit = await Kit.find({});
     res.status(200).json(kit);
