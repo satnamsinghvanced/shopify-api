@@ -20,6 +20,15 @@ const kitSchema = new mongoose.Schema({
       color: {
         type: String,
       },
+      url: {
+        type: String,
+      },
+      quantity: {
+        type: String,
+      },
+      variantId: {
+        type: String,
+      },
     },
   ],
 });
